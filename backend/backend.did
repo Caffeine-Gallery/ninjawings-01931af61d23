@@ -1,0 +1,4 @@
+service : {
+  get_high_score: () -> (nat) query;
+  set_high_score: (nat) -> (nat);
+}
