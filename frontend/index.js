@@ -53,11 +53,11 @@ function update() {
             gameOver = true;
             gameOverDisplay.style.display = 'block';
             restartButton.style.display = 'block';
-          backend.set_high_score(score).then(result => {
-            console.log("High score set:", result);
-          }).catch(err => {
-            console.error("Error setting high score:", err);
-          });
+            backend.set_high_score(score).then(result => {
+              console.log("High score set:", result);
+            }).catch(err => {
+              console.error("Error setting high score:", err);
+            });
         }
     });
 
@@ -75,7 +75,7 @@ function update() {
 }
 
 function createPipe() {
-    const gap = 150;
+    const gap = 200; // Increased gap size
     const topHeight = Math.random() * (canvas.height - gap - 100) + 50;
     const bottomY = topHeight + gap;
     const bottomHeight = canvas.height - bottomY;
